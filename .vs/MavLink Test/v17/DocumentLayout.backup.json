@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\V1\\PRJ\\MavLink Test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|e:\\v1\\prj\\mavlink test\\assets\\udpreceiverdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\udpreceiverdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UDPReceiverDisplay.cs",
+              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UDPReceiverDisplay.cs",
+              "RelativeDocumentMoniker": "Assets\\UDPReceiverDisplay.cs",
+              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UDPReceiverDisplay.cs",
+              "RelativeToolTip": "Assets\\UDPReceiverDisplay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T13:31:56.18Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

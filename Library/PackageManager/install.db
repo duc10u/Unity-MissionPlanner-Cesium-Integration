@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "packages": {
+    "com.cesium.unity": {
+      "tarball": {
+        "hash": "670a39a19062",
+        "mtime": 1731337283944,
+        "size": 22702866,
+        "localPath": "E:\\V1\\PRJ\\_Resources\\Packages\\com.cesium.unity-1.13.1.tgz"
+      }
+    }
+  }
+}
