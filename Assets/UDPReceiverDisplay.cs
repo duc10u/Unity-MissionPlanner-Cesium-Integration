@@ -28,12 +28,27 @@ public class UDPReceiverDisplay : MonoBehaviour
     private int receiveTimeoutDurationMs = 2000;
 
     // Variables to hold the MAVLink data to be displayed
+    private double latValue;
+    private double lonValue;
+    private double altValue;
+    private float rollValue;
+    private float pitchValue;
+    private float yawValue;
+
     private string latitude;
     private string longitude;
     private string altitude;
     private string roll;
     private string pitch;
     private string yaw;
+
+    // Public properties to access the current telemetry values
+    public double LatitudeValue => latValue;
+    public double LongitudeValue => lonValue;
+    public double AltitudeValue => altValue;
+    public float RollValue => rollValue;
+    public float PitchValue => pitchValue;
+    public float YawValue => yawValue;
 
     void Start()
     {
@@ -123,21 +138,28 @@ public class UDPReceiverDisplay : MonoBehaviour
     // Update local variables with position data
     private void UpdatePositionData(MAVLink.mavlink_global_position_int_t position)
     {
-        double lat = position.lat / 1e7;
-        double lon = position.lon / 1e7;
-        double alt = position.relative_alt / 1000.0;
+        // Latitude and longitude are scaled by 1E7 in MAVLink
+        latValue = position.lat / 1e7;
+        lonValue = position.lon / 1e7;
+        altValue = position.relative_alt / 1000.0; // Convert mm to meters
 
-        latitude = $"Latitude: {lat}";
-        longitude = $"Longitude: {lon}";
-        altitude = $"Altitude: {alt}"; // Relative altitude from home; Use "alt" for MSL altitude
+        // Format strings for UI display
+        latitude = $"Latitude: {latValue:F7}";
+        longitude = $"Longitude: {lonValue:F7}";
+        altitude = $"Altitude: {altValue:F2} m";
     }
 
     // Update local variables with attitude data
     private void UpdateAttitudeData(MAVLink.mavlink_attitude_t attitude)
     {
-        roll = $"Roll: {attitude.roll}";
-        pitch = $"Pitch: {attitude.pitch}";
-        yaw = $"Yaw: {attitude.yaw}";
+        rollValue = attitude.roll;
+        pitchValue = attitude.pitch;
+        yawValue = attitude.yaw;
+
+        // Format strings for UI display
+        roll = $"Roll: {rollValue:F3}";
+        pitch = $"Pitch: {pitchValue:F3}";
+        yaw = $"Yaw: {yawValue:F3}";
     }
 
     // Update UI text elements on the main thread
