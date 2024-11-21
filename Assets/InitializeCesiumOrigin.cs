@@ -10,6 +10,8 @@ public class InitializeCesiumOrigin : MonoBehaviour
 
     public float initializationDelay = 0.2f; // Delay in seconds before initializing the origin
 
+    public bool IsInitialized { get; private set; } // Check for original initialization
+
     void Start()
     {
         // Get the CesiumGlobeAnchor component attached to this GameObject
@@ -57,7 +59,7 @@ public class InitializeCesiumOrigin : MonoBehaviour
     {
         // Set the CesiumGlobeAnchor's position using latitude and longitude
         globeAnchor.longitudeLatitudeHeight = new double3(longitude, latitude, 2250.0);
-
+        IsInitialized = true;
         // Log the initialized position for debugging
         Debug.Log($"Cesium Origin initialized at Lat: {latitude}, Lon: {longitude}.");
     }

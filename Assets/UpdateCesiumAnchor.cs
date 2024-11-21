@@ -8,6 +8,7 @@ public class UpdateCesiumAnchor : MonoBehaviour
     public UDPReceiverDisplay udpReceiver; // Reference to the UDPReceiverDisplay script
     private CesiumGlobeAnchor globeAnchor; // The CesiumGlobeAnchor component on this GameObject
     public Cesium3DTileset terrainTileset; // Cesium World Terrain
+    public InitializeCesiumOrigin initializeCesiumOrigin; // Reference to the InitializeCesiumOrigin script
 
     private double initialLatitude;
     private double initialLongitude;
@@ -23,11 +24,13 @@ public class UpdateCesiumAnchor : MonoBehaviour
         if (globeAnchor == null)
         {
             Debug.LogError("CesiumGlobeAnchor component is missing!");
+            return;
         }
 
         if (udpReceiver == null)
         {
             Debug.LogError("UDPReceiverDisplay reference is missing!");
+            return;
         }
 
         if (terrainTileset == null)
@@ -36,23 +39,36 @@ public class UpdateCesiumAnchor : MonoBehaviour
             return;
         }
 
-        // Initialize the position
+        if (initializeCesiumOrigin == null)
+        {
+            Debug.LogError("InitializeCesiumOrigin reference is missing!");
+            return;
+        }
+
+        // Start the coroutine to wait for the InitializeCesiumOrigin script and tileset readiness
+        StartCoroutine(WaitForOriginAndTileset());
+    }
+
+    IEnumerator WaitForOriginAndTileset()
+    {
+        // Wait until InitializeCesiumOrigin has completed its initialization
+        while (!initializeCesiumOrigin.IsInitialized)
+        {
+            Debug.Log("Waiting for Cesium Origin to be initialized...");
+            yield return null; // Wait for the next frame
+        }
+
+        // Once the origin is set, retrieve the latitude and longitude from the UDPReceiverDisplay
         initialLatitude = udpReceiver.LatitudeValue;
         initialLongitude = udpReceiver.LongitudeValue;
 
         if (initialLatitude == 0 || initialLongitude == 0)
         {
             Debug.LogWarning("Initial latitude or longitude is invalid. Skipping terrain height sampling.");
-            return;
+            yield break;
         }
 
-        // Start the coroutine to wait for the tileset to be ready
-        StartCoroutine(WaitForTilesetAndSampleHeight());
-    }
-
-    IEnumerator WaitForTilesetAndSampleHeight()
-    {
-        // Wait for the tileset to load (progress > 99%)
+        // Wait for the Cesium tileset to load (progress > 99%)
         while (terrainTileset.ComputeLoadProgress() < 99.0f)
         {
             yield return null; // Wait for the next frame
@@ -78,7 +94,7 @@ public class UpdateCesiumAnchor : MonoBehaviour
 
             if (result != null)
             {
-                Debug.Log(result);
+               Debug.Log(result);
             }
             else
             {
@@ -105,7 +121,7 @@ public class UpdateCesiumAnchor : MonoBehaviour
             globeAnchor.longitudeLatitudeHeight = new double3(longitude, latitude, altitude);
 
             // Optional: Log the updated position for debugging
-            //Debug.Log($"CesiumGlobeAnchor updated to Lat: {latitude}, Lon: {longitude}, Alt: {altitude} meters");
+            // Debug.Log($"CesiumGlobeAnchor updated to Lat: {latitude}, Lon: {longitude}, Alt: {altitude} meters");
         }
     }
 }

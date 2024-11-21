@@ -3,15 +3,12 @@
   "WorkspaceRootPath": "E:\\V1\\PRJ\\MavLink Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\updatecesiumanchor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|e:\\v1\\prj\\mavlink test\\assets\\updatecesiumanchor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\updatecesiumanchor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|e:\\v1\\prj\\mavlink test\\assets\\initializecesiumorigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\initializecesiumorigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\initializecesiumorigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\V1\\PRJ\\MoPhongHienTruongGTNew\\Assets\\_Main\\_Duc\\Scripts\\LocationSearchAdjustHeight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\udpreceiverdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LocationSearchAdjustHeight.cs",
-              "DocumentMoniker": "E:\\V1\\PRJ\\MoPhongHienTruongGTNew\\Assets\\_Main\\_Duc\\Scripts\\LocationSearchAdjustHeight.cs",
-              "RelativeDocumentMoniker": "..\\MoPhongHienTruongGTNew\\Assets\\_Main\\_Duc\\Scripts\\LocationSearchAdjustHeight.cs",
-              "ToolTip": "E:\\V1\\PRJ\\MoPhongHienTruongGTNew\\Assets\\_Main\\_Duc\\Scripts\\LocationSearchAdjustHeight.cs",
-              "RelativeToolTip": "..\\MoPhongHienTruongGTNew\\Assets\\_Main\\_Duc\\Scripts\\LocationSearchAdjustHeight.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T04:46:03.222Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -48,7 +32,7 @@
               "RelativeDocumentMoniker": "Assets\\InitializeCesiumOrigin.cs",
               "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\InitializeCesiumOrigin.cs",
               "RelativeToolTip": "Assets\\InitializeCesiumOrigin.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDoAAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T04:00:26.367Z",
               "EditorCaption": ""
@@ -61,14 +45,14 @@
               "RelativeDocumentMoniker": "Assets\\UpdateCesiumAnchor.cs",
               "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UpdateCesiumAnchor.cs",
               "RelativeToolTip": "Assets\\UpdateCesiumAnchor.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAADwv2gAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwEAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T15:22:49.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "UDPReceiverDisplay.cs",
               "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UDPReceiverDisplay.cs",
               "RelativeDocumentMoniker": "Assets\\UDPReceiverDisplay.cs",
@@ -76,8 +60,7 @@
               "RelativeToolTip": "Assets\\UDPReceiverDisplay.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAADwv40AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T13:31:56.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T13:31:56.18Z"
             }
           ]
         }
