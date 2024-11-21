@@ -1,23 +1,24 @@
 using UnityEngine;
 using Unity.Mathematics;
 using CesiumForUnity;
+using System.Collections;
 
 public class UpdateCesiumAnchor : MonoBehaviour
 {
     public UDPReceiverDisplay udpReceiver; // Reference to the UDPReceiverDisplay script
     private CesiumGlobeAnchor globeAnchor; // The CesiumGlobeAnchor component on this GameObject
-    public CesiumGlobeAnchor originAnchor;
+    public Cesium3DTileset terrainTileset; // Cesium World Terrain
 
-    double latitude;
-    double longitude;
-    double altitude;
-    double originHeight;
+    private double initialLatitude;
+    private double initialLongitude;
+    private double initTerrainHeight;
+
+    private double altitude;
 
     void Start()
     {
         // Get the CesiumGlobeAnchor component on this GameObject
         globeAnchor = GetComponent<CesiumGlobeAnchor>();
-        originAnchor = GetComponent<CesiumGlobeAnchor>();
 
         if (globeAnchor == null)
         {
@@ -29,10 +30,65 @@ public class UpdateCesiumAnchor : MonoBehaviour
             Debug.LogError("UDPReceiverDisplay reference is missing!");
         }
 
+        if (terrainTileset == null)
+        {
+            Debug.LogError("Cesium3DTileset reference is missing!");
+            return;
+        }
+
         // Initialize the position
-        latitude = udpReceiver.LatitudeValue;
-        longitude = udpReceiver.LongitudeValue;
-        altitude = udpReceiver.AltitudeValue + originHeight;
+        initialLatitude = udpReceiver.LatitudeValue;
+        initialLongitude = udpReceiver.LongitudeValue;
+
+        if (initialLatitude == 0 || initialLongitude == 0)
+        {
+            Debug.LogWarning("Initial latitude or longitude is invalid. Skipping terrain height sampling.");
+            return;
+        }
+
+        // Start the coroutine to wait for the tileset to be ready
+        StartCoroutine(WaitForTilesetAndSampleHeight());
+    }
+
+    IEnumerator WaitForTilesetAndSampleHeight()
+    {
+        // Wait for the tileset to load (progress > 99%)
+        while (terrainTileset.ComputeLoadProgress() < 99.0f)
+        {
+            yield return null; // Wait for the next frame
+        }
+
+        Debug.Log("Cesium3DTileset is ready, sampling terrain height...");
+
+        // Now sample the terrain height
+        SampleInitialTerrainHeight();
+    }
+
+    async void SampleInitialTerrainHeight()
+    {
+        try
+        {
+            // Prepare the position as a double3 (longitude, latitude, height)
+            double3 position = new double3(initialLongitude, initialLatitude, 0.0);
+
+            Debug.Log($"Sampling height at Lat: {initialLatitude}, Lon: {initialLongitude}");
+
+            // Use SampleHeightMostDetailed to get the terrain height
+            CesiumSampleHeightResult result = await terrainTileset.SampleHeightMostDetailed(position);
+
+            if (result != null)
+            {
+                Debug.Log(result);
+            }
+            else
+            {
+                Debug.LogWarning("Terrain height sampling failed.");
+            }
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Error sampling terrain height: {ex.Message}");
+        }
     }
 
     void Update()
@@ -41,15 +97,15 @@ public class UpdateCesiumAnchor : MonoBehaviour
         if (globeAnchor != null && udpReceiver != null)
         {
             // Get the current latitude, longitude, and altitude from UDPReceiverDisplay
-            latitude = udpReceiver.LatitudeValue;
-            longitude = udpReceiver.LongitudeValue;
-            altitude = udpReceiver.AltitudeValue;
+            double latitude = udpReceiver.LatitudeValue;
+            double longitude = udpReceiver.LongitudeValue;
+            double altitude = udpReceiver.AltitudeValue;
 
             // Update the CesiumGlobeAnchor position
-            globeAnchor.longitudeLatitudeHeight = new double3(latitude, longitude, altitude);
+            globeAnchor.longitudeLatitudeHeight = new double3(longitude, latitude, altitude);
 
             // Optional: Log the updated position for debugging
-            Debug.Log($"CesiumGlobeAnchor updated to Lat: {latitude}, Lon: {longitude}, Alt: {altitude} meters");
+            //Debug.Log($"CesiumGlobeAnchor updated to Lat: {latitude}, Lon: {longitude}, Alt: {altitude} meters");
         }
     }
 }

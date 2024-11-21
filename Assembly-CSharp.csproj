@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\UDPReceiverDisplay.cs" />
     <Compile Include="Assets\CesiumBoxExcluder.cs" />
+    <Compile Include="Assets\InitializeCesiumOrigin.cs" />
     <Compile Include="Assets\UpdateCesiumAnchor.cs" />
   </ItemGroup>
   <ItemGroup>
