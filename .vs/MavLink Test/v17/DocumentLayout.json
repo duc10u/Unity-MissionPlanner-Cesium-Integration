@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "E:\\V1\\PRJ\\MavLink Test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|e:\\v1\\prj\\mavlink test\\assets\\updatecesiumanchor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\updatecesiumanchor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\scripts\\followdronecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\followdronecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\initializecesiumorigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\initializecesiumorigin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\scripts\\updatecesiumanchor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\updatecesiumanchor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\udpreceiverdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\udpreceiverdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|e:\\v1\\prj\\mavlink test\\assets\\scripts\\bottomdronecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bottomdronecamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|e:\\v1\\prj\\mavlink test\\assets\\scripts\\cameramanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameramanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\scripts\\dronebladecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dronebladecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|E:\\V1\\PRJ\\MavLink Test\\assets\\scripts\\udpreceiverdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F9ED39D-BAF2-3066-D0B7-70A18212CBE4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\udpreceiverdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +34,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "InitializeCesiumOrigin.cs",
-              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\InitializeCesiumOrigin.cs",
-              "RelativeDocumentMoniker": "Assets\\InitializeCesiumOrigin.cs",
-              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\InitializeCesiumOrigin.cs",
-              "RelativeToolTip": "Assets\\InitializeCesiumOrigin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABYAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CameraManager.cs",
+              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\CameraManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraManager.cs",
+              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\CameraManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T04:00:26.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateCesiumAnchor.cs",
-              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UpdateCesiumAnchor.cs",
-              "RelativeDocumentMoniker": "Assets\\UpdateCesiumAnchor.cs",
-              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UpdateCesiumAnchor.cs",
-              "RelativeToolTip": "Assets\\UpdateCesiumAnchor.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwEAAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T15:22:49.865Z",
+              "WhenOpened": "2024-11-23T04:35:35.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UDPReceiverDisplay.cs",
-              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UDPReceiverDisplay.cs",
-              "RelativeDocumentMoniker": "Assets\\UDPReceiverDisplay.cs",
-              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\UDPReceiverDisplay.cs",
-              "RelativeToolTip": "Assets\\UDPReceiverDisplay.cs",
-              "ViewState": "AgIAAIQAAAAAAAAAAADwv40AAAAlAAAAAAAAAA==",
+              "Title": "BottomDroneCamera.cs",
+              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\BottomDroneCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BottomDroneCamera.cs",
+              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\BottomDroneCamera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BottomDroneCamera.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowEQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T13:31:56.18Z"
+              "WhenOpened": "2024-11-23T04:29:43.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FollowDroneCamera.cs",
+              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\FollowDroneCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FollowDroneCamera.cs",
+              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\FollowDroneCamera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FollowDroneCamera.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T04:15:36.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateCesiumAnchor.cs",
+              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\UpdateCesiumAnchor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UpdateCesiumAnchor.cs",
+              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\UpdateCesiumAnchor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UpdateCesiumAnchor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T17:16:53.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DroneBladeController.cs",
+              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\DroneBladeController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DroneBladeController.cs",
+              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\DroneBladeController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DroneBladeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T08:05:47.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UDPReceiverDisplay.cs",
+              "DocumentMoniker": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\UDPReceiverDisplay.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UDPReceiverDisplay.cs",
+              "ToolTip": "E:\\V1\\PRJ\\MavLink Test\\Assets\\Scripts\\UDPReceiverDisplay.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UDPReceiverDisplay.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAiwKMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T07:58:47.336Z"
             }
           ]
         }

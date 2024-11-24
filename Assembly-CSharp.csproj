@@ -60,10 +60,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2023.1.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\UDPReceiverDisplay.cs" />
-    <Compile Include="Assets\CesiumBoxExcluder.cs" />
-    <Compile Include="Assets\InitializeCesiumOrigin.cs" />
-    <Compile Include="Assets\UpdateCesiumAnchor.cs" />
+    <Compile Include="Assets\Scripts\CesiumBoxExcluder.cs" />
+    <Compile Include="Assets\Scripts\InitializeCesiumOrigin.cs" />
+    <Compile Include="Assets\Scripts\FollowDroneCamera.cs" />
+    <Compile Include="Assets\Scripts\DroneBladeController.cs" />
+    <Compile Include="Assets\Scripts\UpdateCesiumAnchor.cs" />
+    <Compile Include="Assets\Scripts\BottomDroneCamera.cs" />
+    <Compile Include="Assets\Scripts\UDPReceiverDisplay.cs" />
+    <Compile Include="Assets\Scripts\CameraManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
